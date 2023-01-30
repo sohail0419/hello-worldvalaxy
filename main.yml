@@ -4,5 +4,6 @@
   become: true
   tasks: 
     - name: test
-      debug:
-        msg: " this is working fine"
+      copy:
+        src: /opt/playbooks/webapp/target/webapp.war
+        dest: /opt/apache-tomcat-8.5.85/webapps
